@@ -1,0 +1,383 @@
+@charset "utf-8";
+
+.tweet-area{
+    display: flex;
+    padding: 16px;
+    padding-left: 15px;
+    padding-right: 17px;
+}
+
+.main-header{
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    width: 598px;
+    border-bottom: 1px solid rgb(239, 243, 244);
+    z-index: 10;
+}
+
+.main-header h1{
+    padding: 10px 16px;
+    font-size: 2.2rem;
+}
+
+.myicon{
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+.myicon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all .2s;
+    background-color: #fff;
+}
+
+.myicon .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.myicon img:hover + .bg{
+    background: rgba(0, 0, 0, 0.100);
+}
+
+.input-area{
+    width: 100%;
+}
+
+form{
+    padding-left: 1.3rem;
+}
+
+.input-area .pictures-chack-area{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid rgb(239, 243, 244);
+}
+
+.pictures-chack{
+    position: relative;
+}
+
+.pictures-chack img{
+    width: 100%;
+    height: 100%;
+    max-height: 282px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.pictures-chack video{
+    width: 100%;
+    height: 100%;
+    max-height: 282px;
+    border-radius: 16px;
+}
+
+.input-area textarea{
+    font-size: 2rem;
+    width: 100%;
+    min-height: 100px;
+    height: 100%;
+    resize: none;
+    border:0;
+}
+
+#delete_btn{
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: rgba(15, 20, 25, 0.75);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#delete_btn:hover{
+    background-color: rgba(39, 44, 48, 0.75);
+}
+
+#delete_btn::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(45deg);
+    display: block;
+    content: '';
+    width: 18px;
+    height: 1px;
+    background: #fff;
+}
+
+#delete_btn::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    content: '';
+    width: 18px;
+    height: 1px;
+    background: #fff;
+    transform: translate(-50%, -50%) rotateZ(-45deg);
+}
+.file-area{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all .3s;
+}
+
+.button-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 0;
+}
+
+.button-area input{
+    display: none;
+}
+
+.button-area svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    cursor: pointer;
+}
+
+.file-area:hover{
+    background-color: rgb(227, 245, 255);
+}
+
+.button-area button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 8px 20px;
+}
+
+.btn-tweet{
+    color: #fff;
+    border-radius: 100vh;
+    background-color: #1da1f2;
+}
+
+.btn-tweet:hover{
+    background-color: rgb(26, 145, 218) !important;
+}
+
+.main .ditch {
+    height: 15px;
+    background-color: #f2f8f8;
+    border-top: 1px solid #eef;
+    border-bottom: 1px solid #eef;
+}
+
+.tweet{
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.tweet:hover{
+    background-color: rgba(0, 0, 0, 0.030);
+}
+
+.tweet .tweet-content{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgb(239, 243, 244);
+    padding: 10px 15px;
+}
+
+.tweet .user-icon{
+    position: relative;
+    width: 48px;
+    border: 0;
+}
+
+.tweet .user-icon .myicon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+}
+
+.tweet-main{
+    margin-left: 20px;
+    font-size: 1.6rem;
+    flex-grow: 1;
+}
+
+.tweet .tweet-main .user{
+    display: flex;
+    align-items: center;
+}
+
+.tweet .tweet-main .user p{
+    padding-top: 2px;
+    color: rgb(126, 126, 126);
+}
+
+.tweet .tweet-main .user .user-name{
+    font-size: 1.6rem;
+}
+
+.tweet .tweet-main .user a{
+    display: flex;
+}
+
+.tweet .tweet-main .user svg{
+    border: none;
+    width: 3.875rem;
+    height: 3.875rem;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all .2s;
+}
+
+.tweet .tweet-main .user svg:hover{
+    background-color: rgb(227, 245, 255);
+    fill: #1af;
+}
+
+.tweet .tweet-main .user .line{
+    position: relative;
+    top: -5px;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+}
+
+.tweet .tweet-main .user a:hover > .user-name .line{
+    background-color: #000;
+}
+
+.tweet .tweet-main .user .user-id{
+    padding-left: 10px;
+}
+
+.tweet .tweet-main .tweet-body{
+    width: 100%;
+    height: fit-content;
+    padding: 5px 0;
+}
+
+.tweet .tweet-main img{
+    width: 504px;
+    max-height: 504px;
+    border-radius: 16px;
+    border: 1px solid rgb(207, 217, 222);
+    overflow: hidden;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.tweet .tweet-main video{
+    display: block;
+    border-radius: 1.5em;
+    width: 100%;
+    max-height: 504px;
+    background-color: #000;
+    border: 1px solid #000;
+}
+
+.tweet .btn-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 80%;
+}
+
+.tweet .btn-list div{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+.btn-list svg{
+    transition: all .5s;
+}
+
+.btn-list .btn-message:hover > .message{
+    background-color: rgb(227, 245, 255);
+}
+
+.btn-list .btn-message:hover > .message-count{
+    color: #1af;
+}
+
+.btn-list .btn-message:hover > .message svg{
+    fill: #1af;
+}
+
+.btn-list .btn-retweet:hover > .retweet{
+    background-color: rgba(23, 191, 99, 0.1);
+}
+
+.btn-list .btn-retweet:hover > .retweet-count{
+    color: rgb(23, 191, 99);
+}
+
+.btn-list .btn-retweet:hover > .retweet svg{
+    fill: rgb(23, 191, 99);
+}
+
+.btn-list .btn-like:hover > .like{
+    background-color: rgba(224, 36, 94, 0.1);
+}
+
+.btn-list .btn-like:hover > .like-count{
+    color: rgb(224, 36, 94);
+}
+
+.btn-list .btn-like:hover > .like svg{
+    fill: rgb(224, 36, 94);
+}
+
+.btn-list .btn-upload:hover > .upload{
+    background-color: rgb(227, 245, 255);
+}
+
+.btn-list .btn-upload:hover > .upload svg{
+    fill: #1af;
+}
+
+.tweet .btn-list button{
+    display: flex;
+    align-items: center;
+}
+
+.tweet .btn-list svg{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tweet .btn-list p{
+    color: rgb(126, 126, 126);
+    font-size: 1.3rem;
+    padding: 5px;
+    transition: all .5s;
+}
