@@ -18,6 +18,7 @@
     <link rel="icon" href="{{asset('img/twitter-icon.svg')}}">
 </head>
 <body>
+    @inject('Util', 'App\Library\Util')
     <div class="flex-area">
 
         <div class="sideber-nav">
@@ -189,7 +190,7 @@
                     <h1>プロフィール</h1></li>
                     <li class="tweet-btn"><a href=""></a><span></span><h1>ツイートする</h1></li>
                     <li class="user-nav"><a href=""></a>
-                        <img src="{{asset($user -> file_name)}}" alt="" class="user-icon">
+                        <img src="{{asset($Util->buildImagePath($user -> file_name, 'user'))}}" alt="" class="user-icon">
                             <div class="user">
                                 <h1 class="user-name">{{$user -> nickname}}</h1>
                                 <p class="user-id">@ {{$user -> name}}</p>

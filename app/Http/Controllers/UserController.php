@@ -31,24 +31,6 @@ class UserController extends Controller
                             ->orderByDESC('T.created_at')
                             ->get();
 
-        if($user){
-            $date = $user -> file_name;
-            $func = new Util;
-            $user->file_name = $func -> buildImagePath($date, 'user');
-        }
-
-        foreach($users_tweets as $user_tweet){
-            $date = $user_tweet -> user_icon;
-            $func = new Util;
-            $user_tweet -> user_icon = $func -> buildImagePath($date, 'user');
-        }
-
-        foreach($users_tweets as $user_tweet){
-            $date = $user_tweet -> tweet_created_at;
-            $func = new Util;
-            $user_tweet->tweet_created_at = $func -> convertToDayTimeAgo($date);
-        }
-
         return view('home', compact('user', 'users_tweets'));
     }
 

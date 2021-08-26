@@ -49,11 +49,8 @@ class TweetController extends Controller
 
                 $request -> file('pictures') -> storeAs('public/img_upload/tweet', $pictures);
 
-                $pictures = time(). '.' . $request -> pictures -> getClientOriginalName();
-                $ext = pathinfo($pictures, PATHINFO_EXTENSION);
                 $filename = pathinfo($pictures, PATHINFO_FILENAME);
                 $path = 'public/img_upload/tweet/';
-
 
                 // ファイル変換（mp4にする）
                 if (preg_match( "/\avi|\mov/i", $ext )) {
@@ -65,7 +62,6 @@ class TweetController extends Controller
                     Storage::delete($path . $pictures);
 
                 }
-
 
                 DB::table('tweets') -> insert([
                     'user_id' => Auth::id(),

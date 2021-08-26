@@ -1,4 +1,6 @@
 $(function () {
+
+    //ファイル選択時の処理
     $('textarea').after('<span class="pictures-chack"></span>');
 
     if ($("input[type=file]").val().length == 0) {
@@ -52,6 +54,11 @@ $(function () {
         });
     });
 
+    $('#delete_btn').on('click', function(){
+        
+    });
+
+    //textareaの処理（文字が入力された時のイベント）
     if ($("#body").val().length == 0) {
         $(".btn-tweet").prop("disabled", true);
         $('.btn-tweet').css('background-color', '#1da1f2');
@@ -71,18 +78,5 @@ $(function () {
             $('.btn-tweet').css('pointer-events', 'none');
         }
     });
-
-
-        $(window).on('load', function () {
-
-            let $textarea = $('#body');
-
-            $textarea.height('auto');
-
-            $textarea.height($textarea.prop('scrollHeight'));
-
-        });
-
-
 
 });

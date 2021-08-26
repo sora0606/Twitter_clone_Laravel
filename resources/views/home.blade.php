@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@inject('Util', 'App\Library\Util')
 
     <div class="main-header">
         <h1>ホーム</h1>
@@ -9,7 +10,7 @@
     <div class="tweet-area">
 
         <a class="myicon" href="">
-            <img src="{{asset($user -> file_name)}}" alt="icon">
+            <img src="{{asset($Util->buildImagePath($user -> file_name, 'user'))}}" alt="icon">
             <span class="bg"></span>
         </a>
 
@@ -98,7 +99,7 @@
         <div class="tweet-content">
             <div class="user-icon">
                 <a href="" class="myicon">
-                    <img src="{{asset($user_tweet -> user_icon)}}" alt="">
+                    <img src="{{asset($Util->buildImagePath($user_tweet -> user_icon, 'user'))}}" alt="">
                     <span class="bg"></span>
                 </a>
             </div>
@@ -111,7 +112,7 @@
                         <p class="user-id">@ {{$user_tweet -> user_name}}</p>
                     </a>
                     <p class="dot">・</p>
-                    <p class="tweet-time">{{$user_tweet -> tweet_created_at}}</p>
+                    <p class="tweet-time">{{$Util->convertToDayTimeAgo($user_tweet -> tweet_created_at)}}</p>
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 426.667 426.667;" xml:space="preserve" fill='rgb(126, 126, 126)'>
                         <g>
