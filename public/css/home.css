@@ -281,7 +281,7 @@ form{
 
 .tweet .tweet-main img{
     width: 504px;
-    max-height: 504px;
+    max-height: 400px;
     border-radius: 16px;
     border: 1px solid rgb(207, 217, 222);
     overflow: hidden;
