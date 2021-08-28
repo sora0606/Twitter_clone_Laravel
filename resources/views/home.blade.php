@@ -81,7 +81,7 @@
                                 </g>
                             </svg>
                         </label>
-                        <input type="file" name="pictures" class="file" id="file" accept="video/*,image/*" multired>
+                        <input type="file" name="pictures" class="file" id="file" accept="video/*,image/*" multired multiple>
                     </div>
                     <button class="btn-tweet" type="submit">ツイートする</button>
                 </div>
